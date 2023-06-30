@@ -1,0 +1,7 @@
+{
+    "name": "framework-wizio-arm",
+    "description": "PlatformIO ARM Framework 2023 Georgi Angelov",
+    "url": "https://github.com/Wiz-IO/framework-wizio-arm",
+    "system": "*",
+    "version": "1.0.0"
+}

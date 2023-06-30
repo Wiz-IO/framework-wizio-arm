@@ -1,0 +1,15 @@
+# Copyright 2023 (c) WizIO ( Georgi Angelov )
+
+from os.path import join
+Import('env')
+
+DST = join( '$BUILD_DIR', 'lib', 'ring_v1')
+SRC = join( '$FRAMEWORK_DIR', 'lib', 'ring_v1' )
+
+env.Append( CPPPATH = [ SRC ] )
+
+try:
+    Import( 'asLIB' )
+    env.Append( LIBS = [ env.BuildLibrary( DST, SRC ) ] )  
+except: 
+    env.BuildSources( DST, SRC )
